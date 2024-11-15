@@ -3,12 +3,12 @@ import languages from './data/languages.js'
 import './App.css'
 
 function App() {
-  const [active, setActive] = useState(0)
+  const [activeLanguage, setActiveLanguage] = useState(0)
 
   function handleClick(e) {
-    const newActive = Number(e.target.getAttribute('data-index'))
+    const newActiveLanguage = Number(e.target.getAttribute('data-index'))
 
-    setActive(newActive)
+    setActiveLanguage(newActiveLanguage)
   }
 
 
@@ -17,17 +17,31 @@ function App() {
 
   return (
     <>
-      <h1>Learn Web development</h1>
-      <div className="container">
-        {languages.map((item, index) => (
-          <div className="pill-item" key={item.id}>
-            <button onClick={handleClick} data-index={index}>{item.title}</button>
-            <div className={active == index ? 'active' : 'hide'}>
-              {item.description}
-            </div>
-          </div>
-        ))}
-      </div>
+      <header>
+        <h1>Learn Web development</h1>
+      </header>
+      <main>
+        <div className="container">
+          {languages.map((item, index) => (
+            <span className="pill-item" key={item.id}>
+              <button
+                className={`pill ${activeLanguage === index ? 'active' : ''}`}
+                onClick={handleClick}
+                data-index={index}>
+                {item.title}
+              </button>
+              <div className={`border ${activeLanguage === index ? '' : 'hide'}`}>
+                <h3 className={activeLanguage === index ? 'active-description' : 'hide'}>{item.title}</h3>
+                <div className={activeLanguage === index ? 'active-description' : 'hide'}>
+                  {item.description}
+                </div>
+              </div>
+
+            </span>
+          ))}
+        </div>
+      </main>
+
 
 
     </>

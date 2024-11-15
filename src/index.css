@@ -2,9 +2,68 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
   font-family: sans-serif;
+}
+
+header {
+  background-color: #f8f9fa;
+  margin-bottom: 20px;
+
+  h1 {
+    padding-bottom: 2rem;
+  }
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+
+}
+
+.pill {
+  background-color: #0d6efd;
+  border: none;
+  color: white;
+  padding: 0.6rem;
+  margin-bottom: 2rem;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.pill.active {
+  background-color: #ffc107;
+  color: black;
+}
+
+.pill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
 }
 
 .hide {
   display: none;
+}
+
+.border {
+  border: solid 1px black;
+  border-radius: 5px;
+  padding: 1.2rem;
+}
+
+.active-description {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  width: 60%;
+  word-wrap: break-word;
+
 }
