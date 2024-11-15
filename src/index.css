@@ -6,15 +6,20 @@
 
 body {
   font-family: sans-serif;
+  background-color: #f4f4f9;
+  padding: 20px;
 }
 
 header {
   background-color: #f8f9fa;
   margin-bottom: 20px;
+  padding: 10px;
+  text-align: center;
+}
 
-  h1 {
-    padding-bottom: 2rem;
-  }
+h1 {
+  font-size: 2rem;
+  padding-bottom: 2rem;
 }
 
 .container {
@@ -22,18 +27,30 @@ header {
   flex-wrap: wrap;
   gap: 15px;
   justify-content: center;
+  align-items: flex-start;
+}
+
+
+.pill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 160px;
 
 }
+
 
 .pill {
   background-color: #0d6efd;
   border: none;
   color: white;
-  padding: 0.6rem;
-  margin-bottom: 2rem;
+  padding: 0.6rem 1rem;
+  margin-bottom: 1rem;
   border-radius: 7px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  text-align: center;
+  max-width: 150px;
 }
 
 .pill.active {
@@ -41,27 +58,22 @@ header {
   color: black;
 }
 
-.pill-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.hide {
-  display: none;
-}
-
 .border {
   border: solid 1px black;
   border-radius: 5px;
   padding: 1.2rem;
+  margin-top: 10px;
+  width: 100%;
 }
 
 .active-description {
   display: block;
+
   margin-top: 10px;
   font-size: 0.9rem;
-  width: 60%;
   word-wrap: break-word;
+}
 
+.hide {
+  display: none;
 }
