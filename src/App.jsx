@@ -30,6 +30,7 @@ function App() {
                 data-index={index}>
                 {item.title}
               </button>
+              </span>
               <div className={`border ${activeLanguage === index ? '' : 'hide'}`}>
                 <h3 className={activeLanguage === index ? 'active-description' : 'hide'}>{item.title}</h3>
                 <div className={activeLanguage === index ? 'active-description' : 'hide'}>
@@ -37,7 +38,6 @@ function App() {
                 </div>
               </div>
 
-            </span>
           ))}
         </div>
       </main>
