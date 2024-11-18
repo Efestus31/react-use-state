@@ -28,6 +28,8 @@ h1 {
   gap: 15px;
   justify-content: center;
   align-items: flex-start;
+  position: relative;
+  min-width: 200px;
 }
 
 
@@ -63,7 +65,11 @@ h1 {
   border-radius: 5px;
   padding: 1.2rem;
   margin-top: 10px;
-  width: 100%;
+  width: 60%;
+  position: absolute;
+  top: 80%;
+  left: 10%;
+
 }
 
 .active-description {
